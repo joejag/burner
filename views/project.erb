@@ -1,0 +1,31 @@
+<!doctype>
+<head>
+<link type="text/css" rel="stylesheet" href="/css/rickshaw.min.css">
+<link type="text/css" rel="stylesheet" href="/css/burner.css">
+
+<script src="/javascript/jquery.191.min.js"></script>
+<script src="/javascript/d3.min.js"></script>
+<script src="/javascript/d3.layout.min.js"></script>
+<script src="/javascript/rickshaw.js"></script>
+<script src="/javascript/burner.js"></script>
+</head>
+<body>
+
+<h3>Burnup for project: <%= @name %></h3>
+
+<div id="chart_container" class="chart_container">
+	<div id="y_axis" class="y_axis"></div>
+	<div id="chart" class="chart"></div>
+    <div id="legend" class="legend"></div>
+</div>
+
+<script>
+    var chart= document.querySelector("#chart")
+    var y_axis = document.querySelector('#y_axis')
+    var legend = document.querySelector("#legend")
+    var project = "<%= @name %>"
+    new BurnUp.create_burnup_graph(chart, y_axis, legend, project)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype>
+<head>
+<link type="text/css" rel="stylesheet" href="/css/rickshaw.min.css">
+<link type="text/css" rel="stylesheet" href="/css/burner.css">
+
+<script src="/javascript/jquery.191.min.js"></script>
+<script src="/javascript/d3.min.js"></script>
+<script src="/javascript/d3.layout.min.js"></script>
+<script src="/javascript/rickshaw.js"></script>
+<script src="/javascript/burner.js"></script>
+</head>
+<body>
+
+<h3>Burnups</h3>
+
+<ul>
+    <% @projects.each do |project| %>
+        <li><a href="/project/<%= project %>"><%= project %></a></li>
+    <% end %>
+</ul>
+
+</body>
+</html>
