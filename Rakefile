@@ -1,3 +1,2 @@
-require File.dirname(__FILE__) + "/my_app.rb"
 require "sinatra/activerecord/rake"
-
+ActiveRecord::Base.establish_connection( :adapter => 'sqlite3', :database  => "burnup.db")
